@@ -1,0 +1,26 @@
+# dependencies
+node_modules/
+
+# IDE
+/.idea
+/.awcache
+/.vscode
+/.devcontainer
+/.classpath
+/.project
+/.settings 
+*.code-workspace
+
+# bundle
+packages/**/*.d.ts
+packages/**/*.js
+
+# tests
+/benchmarks/memory
+/coverage
+/.nyc_output
+/packages/graphql
+/benchmarks/memory
+build/config\.gypi
+
+dist

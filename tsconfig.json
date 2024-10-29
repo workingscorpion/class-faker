@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "ES2015",
+    "declaration": true,
+    "removeComments": true,
+    "emitDeclarationOnly": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES5",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["src/*"],
+      "@test/*": ["test/*"]
+    },
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "strictBindCallApply": true,
+    "moduleResolution": "node",
+    "typeRoots": ["./node_modules/@types", "./src/common/types"],
+    "rootDir": "."
+  },
+  "exclude": ["**/*.spec.ts", "jest.config.js", "test"]
+}
