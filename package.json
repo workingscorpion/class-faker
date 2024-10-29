@@ -1,5 +1,5 @@
 {
-  "name": "nestjs-library-init",
+  "name": "class-faker",
   "version": "0.0.1",
   "description": "",
   "type": "module",
@@ -21,22 +21,24 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/workingscorpion/nestjs-library-init.git"
+    "url": "https://github.com/workingscorpion/class-faker.git"
   },
   "keywords": [
     "sdk",
     "nestjs",
     "nest"
   ],
-  "author": "carl",
+  "author": "workingscorpion",
   "license": "ISC",
   "dependencies": {
     "@nestjs/common": ">= 8.0.0",
     "@nestjs/core": ">= 8.0.0",
+    "class-transformer": "^0.5.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0"
   },
   "devDependencies": {
+    "@faker-js/faker": "^9.1.0",
     "@rollup/plugin-commonjs": "^28.0.1",
     "@rollup/plugin-node-resolve": "^15.3.0",
     "@rollup/plugin-typescript": "^12.1.1",
@@ -52,7 +54,7 @@
     "rollup-plugin-typescript2": "^0.36.0",
     "ts-jest": "^27.0.3",
     "ts-node": "^10.0.0",
-    "typescript": "^4.7.4"
+    "typescript": "5.6.3"
   },
   "peerDependencies": {
     "@nestjs/common": ">= 8.0.0",
