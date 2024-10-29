@@ -6,6 +6,7 @@
     "emitDeclarationOnly": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
     "target": "ES5",
     "sourceMap": true,
     "outDir": "./dist",
@@ -21,5 +22,5 @@
     "typeRoots": ["./node_modules/@types", "./src/common/types"],
     "rootDir": "."
   },
-  "exclude": ["**/*.spec.ts", "jest.config.js", "test"]
+  "exclude": ["**/*.spec.ts", "jest.config.js", "test", "dist"]
 }
