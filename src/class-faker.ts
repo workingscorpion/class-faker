@@ -1,6 +1,7 @@
 import { plainToInstance } from "class-transformer";
 import "reflect-metadata";
 import { faker } from "@faker-js/faker";
+import { getFieldMetadata } from "./faker-decorator";
 
 // 필드 설정 타입 정의
 type FieldOptions<T> = {
@@ -91,4 +92,29 @@ T {
 
   return {} as T;
   // return plainToInstance(entityClass, instance);
+}
+
+export function generateFakeData<T>(cls: new () => T): T {
+  const instance = new cls();
+  const fields = getFieldMetadata(instance);
+
+  console.log("fields :>> ", fields);
+
+  fields.forEach((field) => {
+    switch (field) {
+      case "name":
+        instance[field] = faker.string.alpha();
+        break;
+      case "email":
+        instance[field] = faker.internet.email();
+        break;
+      case "age":
+        instance[field] = faker.number.int({ min: 18, max: 99 });
+        break;
+      default:
+        instance[field] = null;
+    }
+  });
+
+  return instance;
 }

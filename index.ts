@@ -1,4 +1,4 @@
-import { generateStub } from "./src/class-faker";
+import { generateFakeData, generateStub } from "./src/class-faker";
 import { User } from "./src/user.class";
 
 // export * from "./src/class-faker";
@@ -25,8 +25,13 @@ import { User } from "./src/user.class";
 // console.log("result :>> ", result);
 // console.log("fieldNames :>> ", fieldNames);
 
-const fields = Reflect.getMetadata("fields", User.prototype);
-console.log("Fields:", fields); // 필드 리스트 출력
+// const fields = Reflect.getMetadata("fields", User.prototype);
+// console.log("Fields:", fields); // 필드 리스트 출력
+
+const fakeUser = generateFakeData(User);
+console.log("fakeUser :>> ", fakeUser);
+
+// generateStub(fields); // 스텁 생성
 
 // type Fields<T> = (keyof T)[];
 // console.log("typeof User :>> ", typeof User);
