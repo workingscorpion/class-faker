@@ -2,6 +2,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from 'rollup-plugin-dts';
+import { uglify } from "rollup-plugin-uglify";
 
 export default [
   {
@@ -26,6 +27,7 @@ export default [
         declaration: true,
         declarationDir: "dist",
       }),
+      uglify()
     ],
     external: ["@nestjs/common", "@nestjs/core"], // 외부 모듈로 처리할 패키지들
   },
