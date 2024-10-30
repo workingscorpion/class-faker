@@ -21,6 +21,10 @@ export function generateStub<T>(
 
     const options = configs[name] || {}; // 필드별 옵션 가져오기
 
+    if (options.skip) {
+      return;
+    }
+
     if (options.value !== undefined) {
       // 수동 설정한 value가 있으면 우선 적용
       instance[name] = options.value;

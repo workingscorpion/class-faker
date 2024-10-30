@@ -3,5 +3,9 @@ import { User } from "./src/user.class";
 
 // export * from "./src/class-faker";
 
-const fakeUser = generateStub(User);
+const fakeUser = generateStub(User, {
+  name: { skip: true },
+  age: { value: 20 },
+  email: { type: "email" },
+});
 console.log("fakeUser :>> ", fakeUser);
