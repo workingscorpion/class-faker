@@ -16,7 +16,7 @@ export function FakerField(
   return (target: any, propertyKey: string | symbol) => {
     // 기존 필드 메타데이터 가져오기
     const existingFields: FieldMetadata[] =
-      Reflect.getMetadata(fieldMetadataKey, target) || [];
+      Reflect.getMetadata(fieldMetadataKey, target.constructor) || [];
 
     // 필드 타입 가져오기
     const fieldType = Reflect.getMetadata("design:type", target, propertyKey);
@@ -30,7 +30,11 @@ export function FakerField(
     });
 
     // Reflect 메타데이터에 필드 정보 저장
-    Reflect.defineMetadata(fieldMetadataKey, existingFields, target);
+    Reflect.defineMetadata(
+      fieldMetadataKey,
+      existingFields,
+      target.constructor
+    );
   };
 }
 

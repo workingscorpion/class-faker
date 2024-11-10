@@ -12,15 +12,15 @@
     "outDir": "./dist",
     "baseUrl": ".",
     "paths": {
-      "@app/*": ["src/*"],
+      "@app/*": ["lib/*"],
       "@test/*": ["test/*"]
     },
     "strictNullChecks": true,
     "esModuleInterop": true,
     "strictBindCallApply": true,
     "moduleResolution": "node",
-    "typeRoots": ["./node_modules/@types", "./src/common/types"],
+    "typeRoots": ["./node_modules/@types", "lib/common/types"],
     "rootDir": "."
   },
-  "exclude": ["**/*.spec.ts", "jest.config.js", "test", "dist", "example"]
+  "exclude": ["**/*.spec.ts", "jest.config.js", "test", "dist", "examples"]
 }

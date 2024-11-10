@@ -6,7 +6,7 @@ import { getChance } from "./chance-singleton";
 type FieldOptions<T> = {
   type?: string; // custom type for specific generation (e.g., 'email')
   skip?: boolean; // whether to skip this field
-  value?: T; // specific value for this field
+  value?: T | (() => T); // specific value for this field
 };
 
 export function generateStub<T extends Object>(
@@ -27,7 +27,8 @@ export function generateStub<T extends Object>(
 
     if (options.value !== undefined) {
       // 수동 설정한 value가 있으면 우선 적용
-      instance[name] = options.value;
+      instance[name] =
+        typeof options.value === "function" ? options.value() : options.value;
     } else if (type === String) {
       switch (options.type) {
         case "email":
