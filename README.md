@@ -1,6 +1,6 @@
 # @not/class-faker
 
-Class based Faker Object Generator for Testing Node.js
+Class based Faker Object Generator for testing node.js inspired by Fakingoose
 
 ## install
 
