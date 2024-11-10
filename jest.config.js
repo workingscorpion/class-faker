@@ -7,8 +7,8 @@ module.exports = {
   },
   "testMatch": ["**/**.*spec.ts"],
   "moduleNameMapper": {
-    "^src/(.*)$": "<rootDir>/src/$1",
-    "@app/(.*)": "<rootDir>/src/$1",
+    "^lib/(.*)$": "<rootDir>/lib/$1",
+    "@app/(.*)": "<rootDir>/lib/$1",
     "@test/(.*)": "<rootDir>/test/$1",
   },
   "coverageDirectory": "<rootDir>/coverage",

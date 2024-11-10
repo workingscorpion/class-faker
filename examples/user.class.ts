@@ -1,23 +1,14 @@
-# class-faker
+import "reflect-metadata";
+import { faker } from "@faker-js/faker";
+import { FakerField } from "../lib/faker-decorator";
+import { generateStub } from "@app/class-faker";
 
-Class based Faker Object Generator for Testing Node.js
-
-## install
-
-```
-npm install --save-dev class-faker
-```
-
-## How to Use
-
-### Declare Class
-
-```
 export class UserSetting {
   @FakerField()
   lightmode: boolean;
 }
 
+// 예제 엔티티 클래스
 export class User {
   @FakerField()
   name?: string; // optional
@@ -41,11 +32,6 @@ export class User {
   settings: UserSetting;
 }
 
-```
-
-### Generate
-
-```
 const fakeFullUser = generateStub(User);
 const fakeCustomUser = generateStub(User, {
   email: {
@@ -64,13 +50,3 @@ const fakeCustomUser = generateStub(User, {
     skip: true,
   },
 });
-```
-
-### Supported Type
-
-- String
-- Number
-- Date
-- Boolean
-- Array
-- NestedObject

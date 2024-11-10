@@ -1,7 +1,7 @@
 {
   "name": "class-faker",
   "version": "0.0.1",
-  "description": "",
+  "description": "Class based Faker Object Generator for testing node.js",
   "type": "module",
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
@@ -16,10 +16,6 @@
         "default": "./dist/bundle.cjs.js",
         "types": "./dist/index.d.cts"
       }
-    },
-    "./dist": {
-      "import": "./dist/index.js",
-      "require": "./dist/bundle.cjs.js"
     }
   },
   "scripts": {
@@ -30,9 +26,6 @@
     "test:e2e": "jest --config ./jest.config.js --no-cache --detectOpenHandles",
     "lint": "eslint -c .eslintrc.js"
   },
-  "publishConfig": {
-    "@imwebme:registry": "https://npm.pkg.github.com/"
-  },
   "files": [
     "dist"
   ],
@@ -41,21 +34,26 @@
     "url": "https://github.com/workingscorpion/class-faker.git"
   },
   "keywords": [
-    "sdk",
-    "nestjs",
-    "nest"
+    "fake",
+    "chance",
+    "node.js",
+    "node",
+    "test",
+    "class"
   ],
-  "author": "workingscorpion",
-  "license": "ISC",
+  "author": "workingscorpion <workingscorpion@gmail.com>",
+  "homepage": "https://github.com/workingscorpion/class-faker.git",
+  "bugs": {
+    "url": "https://github.com/workingscorpion/class-faker/issues",
+    "email": "workingscorpion@gmail.com"
+  },
+  "license": "MIT",
   "dependencies": {
-    "@nestjs/common": ">= 8.0.0",
-    "@nestjs/core": ">= 8.0.0",
-    "class-transformer": "^0.5.1",
-    "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.2.0"
+    "@faker-js/faker": "^9.2.0",
+    "chance": "^1.1.12",
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
-    "@faker-js/faker": "^9.1.0",
     "@rollup/plugin-commonjs": "^28.0.1",
     "@rollup/plugin-node-resolve": "^15.3.0",
     "@rollup/plugin-typescript": "^12.1.1",
@@ -70,12 +68,16 @@
     "rollup": "^4.24.2",
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-typescript2": "^0.36.0",
-    "ts-jest": "^27.0.3",
+    "rollup-plugin-uglify": "^6.0.4",
     "ts-node": "^10.0.0",
     "typescript": "5.6.3"
   },
   "peerDependencies": {
-    "@nestjs/common": ">= 8.0.0",
-    "@nestjs/core": ">= 8.0.0"
-  }
+    "chance": "^1.1.12",
+    "reflect-metadata": "^0.1.13"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
