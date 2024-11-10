@@ -1,14 +1,31 @@
-// import "reflect-metadata";
-// import { FakerField } from "./faker-decorator";
+import "reflect-metadata";
+import { FakerField } from "./faker-decorator";
 
-// // 예제 엔티티 클래스
-// export class User {
-//   @FakerField()
-//   name?: string; // optional
+export class UserSetting {
+  @FakerField()
+  lightmode: boolean;
+}
 
-//   @FakerField()
-//   age: number;
+// 예제 엔티티 클래스
+export class User {
+  @FakerField()
+  name?: string; // optional
 
-//   @FakerField()
-//   email: string;
-// }
+  @FakerField()
+  age: number;
+
+  @FakerField()
+  email: string;
+
+  @FakerField()
+  isAdmin: boolean;
+
+  @FakerField()
+  createdAt: Date;
+
+  @FakerField(Array, Number)
+  test: number[];
+
+  @FakerField(Object)
+  settings: UserSetting;
+}
