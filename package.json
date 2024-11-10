@@ -26,9 +26,6 @@
     "test:e2e": "jest --config ./jest.config.js --no-cache --detectOpenHandles",
     "lint": "eslint -c .eslintrc.js"
   },
-  "publishConfig": {
-    "@imwebme:registry": "https://npm.pkg.github.com/"
-  },
   "files": [
     "dist"
   ],
@@ -44,14 +41,12 @@
   "author": "workingscorpion",
   "license": "ISC",
   "dependencies": {
-    "@nestjs/common": ">= 8.0.0",
-    "@nestjs/core": ">= 8.0.0",
+    "chance": "^1.1.12",
     "class-transformer": "^0.5.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0"
   },
   "devDependencies": {
-    "@faker-js/faker": "^9.1.0",
     "@rollup/plugin-commonjs": "^28.0.1",
     "@rollup/plugin-node-resolve": "^15.3.0",
     "@rollup/plugin-typescript": "^12.1.1",
@@ -72,7 +67,4 @@
     "typescript": "5.6.3"
   },
   "peerDependencies": {
-    "@nestjs/common": ">= 8.0.0",
-    "@nestjs/core": ">= 8.0.0"
-  }
 }
