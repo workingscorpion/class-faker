@@ -1,5 +1,5 @@
 {
-  "name": "class-faker",
+  "name": "@not/class-faker",
   "version": "0.0.1",
   "description": "Class based Faker Object Generator for testing node.js",
   "type": "module",
@@ -41,7 +41,10 @@
     "test",
     "class"
   ],
-  "author": "workingscorpion <workingscorpion@gmail.com>",
+  "author": "NOT(Nodejs Optimization Team)",
+  "contributors": [
+    "workingscorpion <workingscorpion@gmail.com>"
+  ],
   "homepage": "https://github.com/workingscorpion/class-faker.git",
   "bugs": {
     "url": "https://github.com/workingscorpion/class-faker/issues",

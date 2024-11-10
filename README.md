@@ -1,11 +1,11 @@
-# class-faker
+# @not/class-faker
 
 Class based Faker Object Generator for Testing Node.js
 
 ## install
 
 ```
-npm install --save-dev class-faker
+npm install --save-dev @not/class-faker
 ```
 
 ## How to Use
