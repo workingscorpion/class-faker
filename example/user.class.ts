@@ -1,5 +1,5 @@
 import "reflect-metadata";
-import { FakerField } from "./faker-decorator";
+import { FakerField } from "../src/faker-decorator";
 
 export class UserSetting {
   @FakerField()
