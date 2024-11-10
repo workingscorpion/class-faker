@@ -66,10 +66,6 @@ export function generateStub<T extends Object>(
       } else if (type === Date) {
         instance[name] = getChance().date() as T[keyof T];
       } else if (nestedObjectType === Object) {
-        // } else if (type === Object) {
-        // 하위 객체 (nested object) 생성
-        // instance[name] = generateStub(type) as T[keyof T];
-
         // 객체 타입 처리
         const objectType = Reflect.getMetadata(
           "design:type",

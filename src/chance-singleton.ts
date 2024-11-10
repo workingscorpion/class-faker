@@ -1,4 +1,3 @@
-// chanceSingleton.js
 import Chance from "chance";
 
 let chanceInstance = null;
