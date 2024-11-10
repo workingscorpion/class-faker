@@ -1,7 +1,7 @@
 {
-  "name": "@not/class-faker",
+  "name": "@workingscorpion/class-faker",
   "version": "0.0.1",
-  "description": "Class based Faker Object Generator for testing node.js",
+  "description": "Class based Faker Object Generator for testing node.js inspired by Fakingoose",
   "type": "module",
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
@@ -41,10 +41,7 @@
     "test",
     "class"
   ],
-  "author": "NOT(Nodejs Optimization Team)",
-  "contributors": [
-    "workingscorpion <workingscorpion@gmail.com>"
-  ],
+  "author": "workingscorpion <workingscorpion@gmail.com>",
   "homepage": "https://github.com/workingscorpion/class-faker.git",
   "bugs": {
     "url": "https://github.com/workingscorpion/class-faker/issues",
@@ -52,7 +49,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@faker-js/faker": "^9.2.0",
     "chance": "^1.1.12",
     "reflect-metadata": "^0.1.13"
   },

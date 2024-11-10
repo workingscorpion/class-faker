@@ -1,11 +1,11 @@
-# @not/class-faker
+# @workingscorpion/class-faker
 
 Class based Faker Object Generator for testing node.js inspired by Fakingoose
 
 ## install
 
 ```
-npm install --save-dev @not/class-faker
+npm install --save-dev @workingscorpion/class-faker
 ```
 
 ## How to Use
