@@ -14,7 +14,7 @@ export function generateStub<T extends Object>(
   configs: Partial<Record<keyof T, FieldOptions<T[keyof T]>>> = {}
 ): T {
   const instance = new cls();
-  const fields = getFieldMetadata(instance);
+  const fields = getFieldMetadata(cls);
 
   fields.forEach((field: FieldMetadata) => {
     const { name, type, arrayElementType, nestedObjectType } = field;
@@ -73,7 +73,6 @@ export function generateStub<T extends Object>(
           cls.prototype,
           name
         );
-        console.log(`objectType`, objectType);
         if (objectType) {
           // 하위 객체가 있는 경우 재귀적으로 처리
           instance[name] = generateStub(objectType);
