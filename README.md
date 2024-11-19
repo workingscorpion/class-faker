@@ -10,6 +10,19 @@ npm install --save-dev @workingscorpion/class-faker
 
 ## How to Use
 
+## Setting
+
+```
+// tsconfig.json
+{
+  compilerOptions:{
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+  },
+  ...
+}
+```
+
 ### Declare Class
 
 ```
