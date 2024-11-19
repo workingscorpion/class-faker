@@ -1,6 +1,6 @@
 {
   "name": "@workingscorpion/class-faker",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Class based Faker Object Generator for testing node.js inspired by Fakingoose",
   "type": "module",
   "main": "dist/bundle.cjs.js",
