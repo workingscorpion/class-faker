@@ -9,12 +9,12 @@ export default [
     input: "./index.ts", // SDK의 진입점
     output: [
       {
-        file: "dist/bundle.cjs.js", // CommonJS로 번들링
+        file: "dist/bundle.cjs", // CommonJS로 번들링
         format: "cjs",
         sourcemap: true,
       },
       {
-        file: "dist/bundle.esm.js", // ES Module로 번들링
+        file: "dist/bundle.mjs", // ES Module로 번들링
         format: "esm",
         sourcemap: true,
       },

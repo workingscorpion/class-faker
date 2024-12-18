@@ -1,25 +1,25 @@
 {
   "name": "@workingscorpion/class-faker",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Class based Faker Object Generator for testing node.js inspired by Fakingoose",
   "type": "module",
-  "main": "dist/bundle.cjs.js",
-  "module": "dist/bundle.esm.js",
+  "main": "dist/bundle.cjs",
+  "module": "dist/bundle.mjs",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "import": {
-        "default": "./dist/bundle.esm.js",
+        "default": "./dist/bundle.mjs",
         "types": "./dist/index.d.ts"
       },
       "require": {
-        "default": "./dist/bundle.cjs.js",
+        "default": "./dist/bundle.cjs",
         "types": "./dist/index.d.cts"
       }
     }
   },
   "scripts": {
-    "start": "yarn run build && clear && node dist/bundle.esm.js",
+    "start": "yarn run build && clear && node dist/bundle.mjs",
     "build": "rimraf dist && tsc -p tsconfig.json && rollup -c --verbose",
     "precommit": "lint-staged",
     "prepublishOnly": "npm run build",
